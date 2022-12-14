@@ -10,6 +10,11 @@
  * string na segunda console.log()instrução.
  */
 
- console.log('Senac e Ponte');
-
- console.log('    Remove espaços em branco   ');
+ console.log('Senac e Ponte'.toUpperCase());
+ 
+ console.log('Senac e Ponte'.toLowerCase());
+ 
+ console.log('    Remove espaços em branco   '.trim());
+ 
+ console.log('Hey'.startsWith('H'));
+ 
