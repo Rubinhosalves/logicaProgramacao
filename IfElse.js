@@ -14,9 +14,14 @@ if (nivelDeFome <= 9) {
     console.log('Esperar chegar em casa.')   
 }
 //igualdade == ou ===
-//diferença != ou !==
-console.log('maçã'==='laranja')
-console.log(8 === 8)
-console.log(8 == 8)
-console.log(8 !== 8)
-console.log(8 != 8)
+//não é igual != ou !==
+console.log('maçã'!=='laranja')
+console.log('laranja'==='laranja')
+//console.log(8 !== 8)
+
+
+//menor ou igual é: <=
+//maior ou igual é: >=
+
+//menor que: <
+//maior que: >
