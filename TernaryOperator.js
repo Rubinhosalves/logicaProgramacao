@@ -10,9 +10,9 @@ isLocked ? console.log('Você vai precisar de uma chave para abrir a porta.') : 
 //} else {
 //  console.log('Você não vai precisar de uma chave para abrir a porta.');
 //}
-
+ 
 let isCorrect = true;
-
+ 
 if (isCorrect) {
     console.log('Correto!');
 } else {
