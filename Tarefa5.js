@@ -1,58 +1,67 @@
+// função que o usuário escolha a jogada
 const getUserChoice = userInput => {
     userInput = userInput.toLowerCase();
-    if (userInput === 'pedra' || userInput === 'papel' || userInput === 'tesoura') {
+    if (userInput === 'pedra' || userInput === 'papel' || userInput === 'tesoura' || userInput === 'bomba') {
         return userInput;
-    } else return console.log('Erro')
+    } else return console.log('erro');
 }
 
+//função que o computador escolhe a jogada
 function getComputerChoice() {
-    const numberChoice = Math.floor(Math.random() * 3);
-
+    const numbertChoice = Math.floor(Math.random() * 3);
     let option;
-    switch (numberChoice) {
+    switch (numbertChoice) {
         case 0:
             option = 'pedra';
-            break
+            break;
         case 1:
             option = 'papel';
-            break
+            break;
         case 2:
             option = 'tesoura';
-            break
+            break;
         default:
-            option = 'Erro estranho';
+            option = 'erro';
     }
-    return option
+    return option;
 }
-//console.log(getComputerChoice())
+console.log(getComputerChoice());
 
+//função que determina o vencedor
 function determineWinner(userChoice, computerChoice) {
 
     if (userChoice === computerChoice) {
-        return "empate";
-    } if (userChoice === 'pedra') {
-        if (computerChoice === 'papel') {
-            return "Computador venceu!"
-        } else return "Usuário venceu!"
-    } if (userChoice === 'papel') {
-        if (computerChoice === 'tesoura') {
-            return 'Computador venceu!'
-        } else return 'Usuário venceu!'
-        
-    } if (userChoice === 'tesoura') {
-        if (computerChoice === 'pedra') {
-            return 'Computador venceu!'
-        } else return 'Usuário venceu!'
+        return "Empatou";
     }
-}
-//console.log(determineWinner('pedra', 'pedra'))
+    if (userChoice === 'pedra') {
+        if (computerChoice === 'papel') {
+            return "Computador Ganhou"
+        } else return 'Humano ganhou!'
+    }
+    if (userChoice === 'papel') {
+        if (computerChoice === 'tesoura') {
+            return "Computador Ganhou"
+        } else return 'Humano ganhou!'
+    }
+    if (userChoice === 'tesoura') {
+        if (computerChoice === 'pedra') {
+            return "Computador Ganhou"
+        } else return 'Humano ganhou!'
+    }
+    /*if (userChoice === 'bomba') {
+        return 'Humano Ganhou!'
 
-const playGame = () => {
-    let userChoice = getuserChoice('tesoura');
-    let computerChoice = getComputerChoice()
-    let result = determineWinner(userChoice,computerChoice)
-    console.log(`Escolha do Usuário foi : ${userChoice}`);
-    console.log(`Escolha do computador foi : ${computerChoice}`)
-    console.log(`O resultado foi : ${result}`)
-}  
-playGame()    
+    }*/
+}
+    console.log(determineWinner('papel', 'pedra'))
+    //jogo
+
+    const playGame = () => {
+        let userChoice = getUserChoice('tesoura');
+        let computerChoice = getComputerChoice()
+        let result = determineWinner(userChoice, computerChoice)
+        console.log(`Escolha do usuário foi: ${userChoice}`);
+        console.log(`Escolha do usuário foi: ${computerChoice}`);
+        console.log(`O ganhador foi: ${result}`);
+    }
+    playGame();
