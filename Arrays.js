@@ -45,7 +45,7 @@ console.log(listItem)
 // Atualizando elementos
     //#region 
 // Considere o seguinte array:
-
+uj
         let listaDeCompras = ['pão', 'tomates', 'leite'];
 
 // 1. Altere o segundo elemento do array listaDeCompras para 'abacates'
@@ -97,5 +97,5 @@ const utensilios = ['Garfo',
     // Encontre o tamanho do array objetivos e exiba no console.
     const objetivos = ['Aprender um novo idioma', 'Ler 52 livros', 'Correr uma maratona'];
 //#endregion
-objetivos.length
-console.log(objetivos.length)
+
+console.log(objetivos.length);
