@@ -29,7 +29,7 @@ console.log(vacationSports[2])
 //for(let contador = 0; contador < 26; contador = contador + 1){
   //  console.log(alfabeto[contador])
 //}
-/*
+/* Alfabeto crescente
 //2 segunda maneira
 for(let contador = 0; contador < 26; contador++){
     console.log(alfabeto[contador])
@@ -37,16 +37,74 @@ for(let contador = 0; contador < 26; contador++){
 
 //3 terceira maneira
 /*for(let contador = 0; contador < alfabeto.length; contador++){
-    console.log(alfabeto[contador])
+ console.log(alfabeto[contador])
 }*/
 
-// decrementar o for 
-for(let contador = 25; contador < alfabeto.length; contador){
+
+///while
+/*let contador = 0;
+while (contador < alfabeto.length ){
+    console.log(alfabeto[contador]);
+    contador++;
+}*/
+
+
+// Alfabeto decrecente
+/*for(let contador = 25; contador >= 0; contador--){
     console.log(alfabeto[contador])
-}
+}*/
 
 
 // quebrando o pc
-/*for(let contador = 0; contador <= 0; contador++){
+/*for(let contador = 0; contador > 0; contador++){
     console.log([contador])
 }*/
+
+
+//Ex. Arrays Remoção
+
+
+const novoAlfabeto = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+
+/*for(let j = 0; j < (novoAlfabeto.length) ; j ++) {
+    if(novoAlfabeto[j] === 'A'
+    ||novoAlfabeto[j] === 'E'
+    ||novoAlfabeto[j] === 'I'
+    ||novoAlfabeto[j] === 'O'
+    ||novoAlfabeto[j] === 'U') {
+        console.log(j)
+        console.log(novoAlfabeto[j])
+        novoAlfabeto.splice(j, 1)
+    }
+}
+console.log(novoAlfabeto);
+*/
+
+
+// jeito sotisficado/ loops aninhados
+
+/*const vogais = ['A','E','I','O','U']
+for(let i = 0; i < (novoAlfabeto.length) ; i++) {
+    for(let j = 0; j < vogais.length; j++){
+      if (novoAlfabeto[i] === vogais[j]){
+            novoAlfabeto.splice(i, 1);
+      }
+    }
+}
+console.log(novoAlfabeto)*/
+
+
+
+//do-while
+let contador =0
+do{
+    console.log('Executa pelo menos uma vez.')
+    console.log('valor de contador: ', contador);
+    contador++
+}while(contador < 4)
+
+
+
+
+
+
